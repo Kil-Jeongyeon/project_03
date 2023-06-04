@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3D Printing Tips for Beginners</title>
+    <style>
+      html,body,h1,h2,h3,p,button,nav,ul,{margin: 0; padding: 0;}
+      html{font-size:18px; font-family: "Pretendard-Regular"}
+      p{
+        font-size: 18px;
+        line-height: 32px;
+        padding-top: 15px;
+        color: lightgray;
+      }
+      p.small{
+        font-size:14px;
+        color: darkgray;
+        opacity: 60%;
+        padding-top: 5px;
+      }
+      h1,h2,h3,h4,a{font-family: "Gochi Hand";}
+      h1{color: #C6F500; font-size: 120px; text-align: center; margin: auto; -webkit-transform:rotate(-4deg);}
+      h3{font-size: 84px; padding-top:100px; line-height: 100px;}
+      hr{border-color: black; border-width: 0.1px; opacity: 0.5}
+
+      body {
+/*        background: #101010;*/
+          background: black;
+          margin: 0;
+       }
+/*      img{margin: 0; padding: 0;}*/
+      button{font-family: "Gochi Hand"; font-size: 36px; margin: 0; padding: 0;}
+      h2{font-size: 36px; margin: 0;}
+      a{
+      display: block;
+      padding: 10px 15px;
+      padding-top: 6px;
+      text-decoration: none;
+      color : #C6F500;
+      font-size:16px;
+    }
+
+      a.hover:hover{background: #C6F500;
+      color:white;
+      transition:all 0.5s}
+/*      a.none{padding: 0; margin: 0; color: none; height: 0;}*/
+
+/*      u{margin-top:10px;}*/
+
+      }
+  .wrapper{width: 100%; margin:auto;}
+  .wrapper2{width: 1200px; margin: auto;}
+/*  .wrapper-index{width: 150px; margin: auto;}
+  .wrapper-level{height:100vh; width: 1200px; margin:auto;}*/
+  .flex{display:flex; justify-content: space-between; flex-wrap: wrap;}
+
+  .col-2{width:47%; padding-top: 200px; padding-bottom: 100px; padding-left: 10px;}
+  .col-index{margin: 0; padding:20px; background-color: white; box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); width:200px; }
+  .col-index-top{margin: 0; padding:20px; padding-top:0px; padding-bottom:0px; background-color: #FF9292; width:200px; height: 2.5px;}
+  .col-footer{width: 20%;}
+  .wrapper{width: 100%; margin:auto;}
+  .wrapper2{width: 1200px; margin: auto;}
+  .wrapper-index{width: 150px; margin: auto;}
+  .col-index-top{margin: 0; padding:20px; padding-top:0px; padding-bottom:0px; background-color: #FF9292; width:200px; height: 2.5px;}
+  .wrapper-level{height:100vh; width: 1200px; margin:auto;}
+  .flex{display:flex; justify-content: space-between; flex-wrap: wrap;}
+
+  .col-2{width:47%; padding-top: 200px; padding-bottom: 100px; padding-left: 10px;}
+  .col-index{margin: 0; padding:20px; background-color: white; box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); width:200px; }
+  .col-footer{width: 15%;}
+ 
+  .background-img{
+    background: url(homeimg.png);
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    margin: auto;
+    margin-bottom: 0;
+    background-repeat:no-repeat;
+  }
+  .background-grid{
+    background: url(grid.png);
+    background-size: 100wh;
+    background-position: center;
+    background-attachment: fixed;
+/*    z-index: 2;*/
+  }
+  .background-cube{
+    background: url(shell.png);
+    background-size: 100%;
+    margin: auto;
+    background-position: center; 
+    background-repeat: no-repeat;
+/*    padding-top:3000px;*/
+/*    background-attachment: fixed;*/
+/*    height: 2000px;*/
+  }
+  .footer{background: #C6F500; font-size: 12px; line-height: 6px;}
+  .footer p{color: black;  margin: 0;}
+  .bg-black{background-color: rgba(0, 0, 0, 0.5);margin:0; padding:0 }
+
+  @keyframes floating{
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+  h1{animation:floating 3s infinite; rotate: -3deg;}
+  h3{animation:floating 3s infinite;}
+  @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+  @font-face {
+        font-family: 'Pretendard-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+.glue {
+  position: relative;
+  animation-name: example;
+  animation: example 4s infinite;
+  animation-direction: reverse;  
+}
+
+
+@keyframes example {
+  0%   {left:200px;}
+  50%  {left:0px;}
+  100% {left:200px;}
+}
+  .collapsible_b, 
+  .collapsible_g, 
+  .collapsible_p{
+            background-color: rgba(255, 255, 255, 0.08);
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border-color: white;
+            border-right: none;
+            border-left: none;
+            text-align: left;
+            outline: none;
+            margin-bottom:25px;
+        }
+  .collapsible_b{color: #7EE1FF}
+  .collapsible_g{color: #C6F500}
+  .collapsible_p{color: #F664EB}
+
+  .active.collapsible_b,.collapsible_b:hover{
+            background-color: #7EE1FF; color: black; border: none;
+        }
+  .active.collapsible_g,.collapsible_g:hover{
+            background-color: #C6F500; color: black; border:none;
+        }
+  .active.collapsible_p,.collapsible_p:hover{
+            background-color: #F664EB; color: black; border:none;
+        }
+  .content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            color: white;
+        }
+
+
+
+    </style>
+    
+    <script>
+        function collapse(element) {
+            var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
+            // if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
+            //     before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
+            //     before.classList.remove("active");                  // 버튼 비활성화
+            // }
+            element.classList.toggle("active");         // 활성화 여부 toggle
+
+            var content = element.nextElementSibling;
+            if (content.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
+                content.style.maxHeight = null;         // 접기
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";  // 접혀있는 경우 펼치기
+            }
+        }
+
+    </script>
+</head>
+
+
+
+
+
+
+
+
+
+
+<body>
+   
+  <section class="background-grid">
+    <nav class="bg-black" style="position: fixed; z-index: 1; width: 100%;">
+    <div class="wrapper flex">
+      <div><a href="index.html" class="hover">3D Printing Tips for Beginners</a></div>
+      </div>
+    </div>
+    </nav>
+
+
+
+
+    <header class="background-img">
+        <div>
+          <h1 style="padding-top: 20vh;">3D Printing Tips <br>for Beginners</h1>
+        </div>
+        <div style="text-align: center; padding-top: 70px;">
+          <a href="#arrow"><img src="arrow.png" style="margin: auto; margin-bottom: 120px; "></img></a>
+        </div>
+    </header>
+    
+    <section style="padding-bottom: 100px;">
+          <a name="arrow" style="margin:0; padding: 0;"></a>
+
+          <button type="button" class="collapsible_b" onclick="collapse(this);" style="color: ;">
+            <div class="wrapper2 flex"><h2>> Modeling Tips</h2></div>
+            <!-- <a name="1"></a> -->
+          </button>
+
+          <div class="content wrapper flex">
+
+
+            <div class="wrapper2 flex">
+                <div>
+                   <h3 style="color:#7EE1FF">1. Shell the Object</h3>
+                   <p>어떤 방식의 3D 프린터이든, 물체의 속을 꽉 채우면 재료 비용과 출력시간이 어마어마하게 들어갈 수 밖에 없어요.<br>‘Shell’과 같은 명령어를 사용하여 불필요한 부분은 비우고 껍데기만 남길 수 있도록 해요!</p>
+                    <p class="small">
+                      다만 사용할 3D 프린터기의 최소 출력두께를 고려해야 해요.
+                    </p>
+                 </div>
+            </div>
+          <img class="wrapper2 flex"src="shell.png" style="opacity:0.9; padding-top:30px; padding-bottom: 150px;"></img>
+
+            <div class="wrapper2 flex">
+                <div>
+                   <h3 style="color:#7EE1FF">2. Check Naked edge</h3>
+                   <p>3D 프린트를 할 때 터진 부분이 있으면 에러가 나요! <br> 터진 부분이 없는지 Show Edge 기능으로 Naked Edge를 확인해주세요.</p>
+                 </div>
+            </div>
+            <img class="wrapper2 flex"src="naked.png" style="opacity:0.9; padding-top:30px; padding-bottom: 150px;"></img>
+
+            <div class="wrapper2 flex">
+                <div>
+                   <h3 style="color:#7EE1FF">3. Convert to .STL</h3>
+                   <p>3D 모델링 파일을 바로 넣고 출력할 순 없어요. 3D 프린터는 G코드 언어로 된 파일만 읽을 수 있으며, <br>이 G코드 언어로 된 파일을 만드려면 확장자를 STL로 변환시켜주어야 해요.</p>
+                   <p class="small">
+                        이 때 stl 파일은 개별 오브젝트로 저장해야, CURA애서 G코드 파일을 만들 때 편해요.                    
+                    </p>
+                 </div>
+            </div>
+             <img class="wrapper2 flex"src="stl.png" style="opacity:0.9; padding-top:30px; padding-bottom: 150px;"></img>
+
+
+
+          </div>
+
+          <button type="button" class="collapsible_g" onclick="collapse(this);">
+            <div class="wrapper2 flex"><h2>> Setting Printer Tips</h2></div>
+            <!-- <a name="2" class="none;"></a> -->
+          </button>
+          <div class="content wrapper flex">
+
+
+            <div class="wrapper2 flex">
+                <div>
+                   <h3 style="color:#C6F500">1. Consider the grain direction</h3>
+                   <p>한 층 한 층 쌓아 올리기 때문에, 층끼리 분리되기 쉬워요.<br>따라서 벽걸이 고리 처럼 힘을 많이 받아야 하는 물체라면 방향을 고려해서 출력해야 해요!</p>
+                </div>
+            </div>
+             <img class="wrapper2 flex"src="grain.png" style="opacity:0.9; padding-top:30px; padding-bottom: 150px;"></img>
+
+            <div class="wrapper2 flex">
+                <div>
+                   <h3 style="color:#C6F500">2. Remove unnecessary supporters</h3>
+                   <p>서포터는 출력 중 출력물이 무너지지 않도록 하는 역할을 해요. <br>서포터 배치를 어떻게 하느냐에 따라 더 빠르고 깔끔하게 출력할 수 있어요.</p>
+                 </div>
+            </div>
+             <img class="wrapper2 flex"src="supporters.png" style="opacity:0.9; padding-top:30px; padding-bottom: 150px;"></img>
+
+            <div class="wrapper2 flex">
+                <div>
+                   <h3 style="color:#C6F500">3. Glue on bed</h3>
+                   <p>출력을 할 때 출력되는 필라멘트가 베드 위에서 미끄러져 제대로 출력이 안나오기도 해요. <br>이를 방지하기 위해 출력 전 베드 위에 접착풀을 발라 출력 필라멘트가 잘 접착되도록 해주세요!</p>
+                 </div>
+            </div>
+             <div class="wrapper2 flex"><div><img src="glue.png" class="glue" style="width:6%; opacity:0.9;padding-right: 500px; padding-top:60px; -webkit-transform:rotate(-160deg)"></img><img class="wrapper2 flex"src="bed.png" style="opacity:0.9; padding-top: 30px;padding-bottom: 150px; "></img></div></div></div>
+
+
+
+          </div>
+
+
+
+
+
+          <button type="button" class="collapsible_p" onclick="collapse(this);">
+            <div class="wrapper2 flex"><h2>> Post Processing Tips</h2></div>
+            <!-- <a name="3" class="none;"></a> -->
+          </button>
+          <div class="content wrapper flex">
+
+
+            <div class="wrapper2 flex">
+                <div>
+                   <h3 style="color:#F664EB">1. Take it off with scraper</h3>
+                   <p>출력이 완료되면 스크래퍼 또는 헤라로 조심스럽게 바닥면을 떼어 내 주세요.</p>
+                </div>
+            </div>
+            <div class="wrapper2 flex">
+             <img src="scraper.png" class="wrapper2 flex" style="opacity:0.9;padding-bottom: 150px; padding-top:60px;"></img></div>
+
+
+            <div class="wrapper2 flex">
+                <div>
+                   <h3 style="color:#F664EB">2. Remove supporters with nipper</h3>
+                   <p>니퍼를 사용하면 구석구석에 박혀있는 서포터를 섬세하게 잘 떼어낼 수 있어요.</p>
+                 </div>
+            </div>
+             <img class="wrapper2 flex"src="nipper.png" style="opacity:0.9; padding-top:30px; padding-bottom: 150px;"></img>
+
+            <div class="wrapper2 flex">
+                <div>
+                   <h3 style="color:#F664EB">3. Sanding</h3>
+                   <p>3D출력물은 적층 결이 남습니다. 사포로 면을 고르게 다듬어주세요. 낮은 방(거친)부터 높은 방(고운)의 사포를 사용하면 돼요. </p>
+                   <p class="small">서페이서, 퍼티와 함께 하면 더 쉽게 면을 정리할 수 있어요.</p>
+                 </div>
+            </div>
+             <div class="wrapper2 flex"><img src="sandpaper.png" class="wrapper2 flex glue" style="opacity:0.9;padding-right: 500px; padding-top:60px;"></img><img class="wrapper2 flex"src="sand.png" style="opacity:0.9;padding-bottom: 150px; "></img></div> </div></div>
+
+
+
+          </div> 
+  </section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer" style="width:100%">
+        <div class="wrapper flex">
+          <div class="wrapper2 flex" style="padding-top:80px; padding-bottom: 70px;">
+            <div class="col-footer">
+              <h4 style="color: black;opacity: 1; line-height:20px; text-align: left; font-size: 18px; padding:0; margin: 0; margin-top:10px;">3D Printing Tips for Beginners</h4>
+            </div>
+
+            <div class="col-footer">
+              <p class="footer" style="opacity: 1; padding-bottom: 10px;"> </p>
+              <p class="footer"> </p>
+              <p class="footer"> </p>
+            </div>
+
+            <div class="col-footer">
+            <p class="footer" style="opacity: 1; padding-bottom: 10px;">About us</p>
+              <p class="footer">What we are</p>
+              <p class="footer">What we do</p>
+            </div>
+
+            <div class="col-footer">
+              <p class="footer" style="opacity: 1;padding-bottom: 10px;">Designer</p>
+              <p class="footer">Kil Jeongyeon</p>
+              <p class="footer">19100828</p>
+            </div>
+            <div class="col-footer">
+              <p class="footer" style="opacity: 1;padding-bottom: 10px;">Contact</p>
+              <p class="footer">010-9768-4876</p>
+              <p class="footer">kilfamily9768@gmail.com</p>
+            </div>
+          </div>
+          <div class="bg-green" style="width:1200px; margin:auto; padding-bottom: 60px;">
+            <hr>
+            <p class="footer" style="padding-top: 15px;">ⓒ2023. Kil Jeongyeon All rights reserved.</p>
+    
+
+  </footer>
+</body>
+</html>
